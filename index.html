@@ -1,0 +1,203 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundation for Sites</title>
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+  <div style="height:150px; width:100%; display:block;"></div>
+  <!-- Circle -->
+
+  <div class="circle" id="circle1">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 210 210" xml:space="preserve">
+      <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve"> -->
+      <defs>
+        <mask id="circleMask">
+          <path id="circlePath2-1" d="
+              M 101,101
+              m -101, 0
+              a 101,101 0 0,0 202,0
+              a 101,101 0 0,0 -202,0 " fill="white" />
+          <path id="circlePath2-2" d="
+              M 100,100
+              m -100, 0
+              a 100,100 0 0,0 200,0
+              a 100,100 0 0,0 -200,0 " fill="black" />
+        </mask>
+        <path id="circlePath2" d="
+            M 101,101
+            m -101, 0
+            a 101,101 0 0,0 202,0
+            a 101,101 0 0,0 -202,0 " />
+      </defs>
+      <g>
+        <use xlink:href="#circlePath2" fill="green" opacity=".1" mask="url(#circleMask)" />
+        <!-- <text fill="#f7f7f7"><textPath xlink:href="#circlePath"></textPath></text> -->
+      </g>
+    </svg>
+  </div>
+
+  <div class="circle" id="circle2">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3 -3 210 210" xml:space="preserve">
+      <g>
+        <use xlink:href="#circlePath2" fill="blue" opacity=".1" mask="url(#circleMask)" />
+        <!-- <text fill="#f7f7f7"><textPath xlink:href="#circlePath"></textPath></text> -->
+      </g>
+    </svg>
+  </div>
+
+  <div class="circle" id="circle3">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3 -3 210 210" xml:space="preserve">
+      <g>
+        <use xlink:href="#circlePath2" fill="red" opacity=".1" mask="url(#circleMask)" />
+        <!-- <text fill="#f7f7f7"><textPath xlink:href="#circlePath"></textPath></text> -->
+      </g>
+    </svg>
+  </div>
+
+
+
+
+  <!-- Text -->
+  <div class="statement">
+    <h2><span class="typed1"></span><span class="typed2"></span><span class="typed3"></span></h2>
+  </div>
+
+
+  <div style="height:900px; width:100%; display:block;"></div>
+
+
+
+  <!-- Grid Example -->
+
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+      <div class="primary callout">
+        <p><strong>This is a twelve cell section in a grid-x.</strong> Each of these includes a div.callout element so you can see where the cell are - it's not required at all for the grid.</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid-x grid-padding-x">
+    <div class="large-6 medium-6 cell">
+      <div class="primary callout">
+        <p>Six cell</p>
+      </div>
+    </div>
+    <div class="large-6 medium-6 cell">
+      <div class="primary callout">
+        <p>Six cell</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid-x grid-padding-x">
+    <div class="large-4 medium-4 small-4 cell">
+      <div class="primary callout">
+        <p>Four cell</p>
+      </div>
+    </div>
+    <div class="large-4 medium-4 small-4 cell">
+      <div class="primary callout">
+        <p>Four cell</p>
+      </div>
+    </div>
+    <div class="large-4 medium-4 small-4 cell">
+      <div class="primary callout">
+        <p>Four cell</p>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <h5>We bet you&rsquo;ll need a form somewhere:</h5>
+  <form>
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <label>Input Label</label>
+        <input type="text" placeholder="large-12.cell" />
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x">
+      <div class="large-4 medium-4 cell">
+        <label>Input Label</label>
+        <input type="text" placeholder="large-4.cell" />
+      </div>
+      <div class="large-4 medium-4 cell">
+        <label>Input Label</label>
+        <input type="text" placeholder="large-4.cell" />
+      </div>
+      <div class="large-4 medium-4 cell">
+        <div class="grid-x">
+          <label>Input Label</label>
+          <div class="input-group">
+            <input type="text" placeholder="small-9.cell" class="input-group-field" />
+            <span class="input-group-label">.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <label>Select Box</label>
+        <select>
+          <option value="husker">Husker</option>
+          <option value="starbuck">Starbuck</option>
+          <option value="hotdog">Hot Dog</option>
+          <option value="apollo">Apollo</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x">
+      <div class="large-6 medium-6 cell">
+        <label>Choose Your Favorite</label>
+        <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
+        <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
+      </div>
+      <div class="large-6 medium-6 cell">
+        <label>Check these out</label>
+        <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+        <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <label>Textarea Label</label>
+        <textarea placeholder="small-12.cell"></textarea>
+      </div>
+    </div>
+  </form>
+  </div>
+
+  <div class="large-4 medium-4 cell">
+    <h5>Try one of these buttons:</h5>
+    <p><a href="#" class="button">Simple Button</a><br />
+      <a href="#" class="success button">Success Btn</a><br />
+      <a href="#" class="alert button">Alert Btn</a><br />
+      <a href="#" class="secondary button">Secondary Btn</a></p>
+    <div class="callout">
+      <h5>So many components, girl!</h5>
+      <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
+      <a href="http://foundation.zurb.com/sites/docs/" class="small button">Go to Foundation Docs</a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/what-input.js"></script>
+  <script src="js/vendor/foundation.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script> -->
+  <script src="js/typed.js"></script>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
