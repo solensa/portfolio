@@ -1,4 +1,4 @@
-$(document).foundation()
+// $(document).foundation()
 
 
 var scrolledBeyond = false;
@@ -147,3 +147,18 @@ function type3(){
     });
   }
 }
+
+
+// Search bar js
+$(document).ready(function() {
+  var input = document.querySelector('input[name=tags-outside]'),
+      // init Tagify script on the above inputs
+      tagify = new Tagify(input);
+
+  // add a class to Tagify's input element
+  tagify.DOM.input.classList.add('tagify__input--outside');
+
+  // re-place Tagify's input element outside of the  element (tagify.DOM.scope), just before it
+  tagify.DOM.scope.parentNode.insertBefore(tagify.DOM.input, tagify.DOM.scope);
+
+})

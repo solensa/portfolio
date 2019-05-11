@@ -8,60 +8,36 @@
   <title>Foundation for Sites</title>
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/app.css">
+  <!-- <script src="js/vendor/jquery.js"></script> -->
+  <!-- <script src="js/vendor/what-input.js"></script>
+  <script src="js/vendor/foundation.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <!-- <script src="https://yaireo.github.io/tagify/dist/tagify.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://yaireo.github.io/tagify/dist/jQuery.tagify.min.js"></script>
+      <script src="https://yaireo.github.io/tagify/dist/tagify.min.js"></script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@2.9.7/dist/tagify.min.js"></script> -->
+
+  <script src="js/typed.js"></script>
+  <script src="js/app.js"></script>
 </head>
 
 <body>
 
   <div style="height:150px; width:100%; display:block;"></div>
-  <!-- Circle -->
 
-  <div class="circle" id="circle1">
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 210 210" xml:space="preserve">
-      <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve"> -->
-      <defs>
-        <mask id="circleMask">
-          <path id="circlePath2-1" d="
-              M 101,101
-              m -101, 0
-              a 101,101 0 0,0 202,0
-              a 101,101 0 0,0 -202,0 " fill="white" />
-          <path id="circlePath2-2" d="
-              M 100,100
-              m -100, 0
-              a 100,100 0 0,0 200,0
-              a 100,100 0 0,0 -200,0 " fill="black" />
-        </mask>
-        <path id="circlePath2" d="
-            M 101,101
-            m -101, 0
-            a 101,101 0 0,0 202,0
-            a 101,101 0 0,0 -202,0 " />
-      </defs>
-      <g>
-        <use xlink:href="#circlePath2" fill="green" opacity=".1" mask="url(#circleMask)" />
-        <!-- <text fill="#f7f7f7"><textPath xlink:href="#circlePath"></textPath></text> -->
-      </g>
-    </svg>
-  </div>
+  <!-- Search bar -->
+  <input name='tags-outside' class='tagify--outside' placeholder='write some tags'>
+  <a href='https://github.com/yairEO/tagify' target='_blank'>Github</a>
+  <label><input type='checkbox'> TOGGLE OFF</label>
 
-  <div class="circle" id="circle2">
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3 -3 210 210" xml:space="preserve">
-      <g>
-        <use xlink:href="#circlePath2" fill="blue" opacity=".1" mask="url(#circleMask)" />
-        <!-- <text fill="#f7f7f7"><textPath xlink:href="#circlePath"></textPath></text> -->
-      </g>
-    </svg>
-  </div>
+  <h2>text input</h2>
+  <input name='tags' placeholder='write some tags' value='foo, bar,buzz, bar'>
 
-  <div class="circle" id="circle3">
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3 -3 210 210" xml:space="preserve">
-      <g>
-        <use xlink:href="#circlePath2" fill="red" opacity=".1" mask="url(#circleMask)" />
-        <!-- <text fill="#f7f7f7"><textPath xlink:href="#circlePath"></textPath></text> -->
-      </g>
-    </svg>
-  </div>
-
+  <h2>textarea</h2>
+  <textarea name='tags2' placeholder='Movie names'>The Matrix, Pulp Fiction, Mad Max</textarea>
 
 
 
@@ -189,14 +165,17 @@
   </div>
   </div>
   </div>
-
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/what-input.js"></script>
-  <script src="js/vendor/foundation.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script> -->
-  <script src="js/typed.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <!-- <script src="https://yaireo.github.io/tagify/dist/tagify.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <script src="https://yaireo.github.io/tagify/dist/jQuery.tagify.min.js"></script>
+      <script src="https://yaireo.github.io/tagify/dist/tagify.min.js"></script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@2.9.7/dist/tagify.min.js"></script> -->
+
+  <script src="js/typed.js"></script>
   <script src="js/app.js"></script>
 </body>
 

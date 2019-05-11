@@ -1,0 +1,108 @@
+
+/* =============================================================================
+   Header css
+   ========================================================================== */
+.pfLogo {
+  /* border-radius: 50%; */
+  /* width: 100%;
+  max-width:100px; */
+  z-index: 1;
+  position: relative;
+  /* -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out; */
+  -webkit-transition: .8s ease-in-out;
+          transition: .8s ease-in-out;
+          left:0;
+          /* transition: left ease 0.5s; */
+}
+.pfLogo:hover {
+  -webkit-transform: rotate(110deg);
+          transform: rotate(110deg);
+             left: 60px;
+}
+
+.pfMe {
+  visibility: hidden;
+  position: absolute;
+  top:10px;
+  left:30px;
+  -webkit-transition: .5s ease-in-out;
+          transition: .5s ease-in-out;
+}
+.pfLogo:hover ~ .pfMe{
+  transition-delay: 0.3s;
+  visibility: visible;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+             left: 10px;
+}
+
+.pfLogoDiv { float: left; position: relative; max-width:120px; width: 100%; padding:20px;}
+
+/* =============================================================================
+   Projects css
+   ========================================================================== */
+
+.pfProjectWrap{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+}
+.pfProject {
+  min-width: 300px;
+  /* display:inline-block; */
+  margin:5px;
+  padding:10px;
+  width:calc(100%/3 - 10px);
+  height:40px;
+  border: 2px solid #333;
+  background-color: white;
+}
+
+/* =============================================================================
+   Tagify css
+   ========================================================================== */
+.tagify--outside {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  max-width: 320px;
+}
+.tagify__input--outside {
+  display: block;
+  max-width: 600px;
+  border: 1px solid #DDD;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+.tagify tag {
+  display: flex;
+  align-items: top;
+  margin: 8px 8px 0 0;
+  height: 36px;
+}
+.tagify tag x::after {
+  position: absolute;
+  content: "\00D7";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.tagify tag > div {
+  background-color: #D2F4FE;
+  border-radius: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.tagify tag:hover div {
+  background-color: #d3e2e2;
+}
+.tagify tag x:hover + div {
+  background-color: rgba(211, 148, 148, 0.3);
+}
+
+/* You're either a leader or a lemming - 重光ロバート*/
