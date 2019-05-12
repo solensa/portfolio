@@ -42,13 +42,14 @@ $(document).ready(function() {
 
   tagify.on('add', function(e){
     // console.log(e.detail.data.value);
-    tagsArr.push(e.detail.data.value);
+    tagsArr.push(e.detail.data.value.toLowerCase());
     refineList();
     bounceContent();
   });
 
   tagify.on('remove', function(e){
     // console.log(e.detail.data.value);
+    bounceContent2();
     tagsArr.splice( tagsArr.indexOf(e.detail.data.value), 1 );
     refineList();
   });
@@ -58,9 +59,21 @@ $(document).ready(function() {
 // Refine List
 // -----------------------------------------------------------------------------
 var tagsArr = [];
-function refineList(newTag) {
+function refineList() {
 
-  console.log(tagsArr)
+  if (tagsArr.length>0){
+    for (i = 0; i < projectTagsArray.length; i++){
+      if (!tagsArr.some(val => projectTagsArray[i].indexOf(val) === -1)){
+        console.log(projectTagsArray[i][0]);
+        $( "#"+projectTagsArray[i][0]).show();
+      } else {
+        $( "#"+projectTagsArray[i][0]).hide();
+      }
+    }
+  } else {
+    $(".pfProject").show();
+  }
+  // console.log(tagsArr)
 }
 
 // -----------------------------------------------------------------------------
@@ -68,6 +81,11 @@ function refineList(newTag) {
 // -----------------------------------------------------------------------------
 
 function bounceContent() {
+  var duration = 1;
+  TweenMax.to($(".projectWindow"), duration / 4, {y:50, ease:Power2.easeOut});
+  TweenMax.to($(".projectWindow"), duration / 2, {y:0, ease:Bounce.easeOut, delay:duration / 4});
+};
+function bounceContent2() {
   var duration = 1;
   TweenMax.to($(".projectWindow"), duration / 4, {y:50, ease:Power2.easeOut});
   TweenMax.to($(".projectWindow"), duration / 2, {y:0, ease:Bounce.easeOut, delay:duration / 4});
