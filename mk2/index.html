@@ -5,10 +5,10 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rob Claridge | Portfolio</title>
+  <title>Robert Claridge | Portfolio</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel='stylesheet' href='https://yaireo.github.io/tagify/dist/tagify.css'>
+  <link rel='stylesheet' href='css/tagify.css'>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css" integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og= sha384-gP4DhqyoT9b1vaikoHi9XQ8If7UNLO73JFOOlQV1RATrA7D0O7TjJZifac6NwPps sha512-AKwIib1E+xDeXe0tCgbc9uSvPwVYl6Awj7xl0FoaPFostZHOuDQ1abnDNCYtxL/HWEnVOMrFyf91TDgLPi9pNg=="
     crossorigin="anonymous">
@@ -33,9 +33,11 @@
         <header>
           <div class="cell shrink header medium-cell-block-container">
             <div class="cell small-12 medium-12 large-12">
-              <div class="pfLogoDiv">
-                <img class="pfLogo" src="assets/shigCrest3.svg">
-                <img class="pfMe" src="assets/rjc2.png">
+              <div class="centerContent">
+                <div class="pfLogoDiv">
+                  <img class="pfLogo" src="assets/shigCrest3.svg">
+                  <img class="pfMe" src="assets/rjc2.png">
+                </div>
               </div>
             </div>
           </div>
@@ -43,46 +45,59 @@
 
         <!-- Top -->
         <main>
-        <div class="grid-x grid-padding-x">
-          <div class="cell small-12 medium-12 large-12">
-            <!-- Text -->
-            <div class="statement">
-              <h3><span class="typed1"></span><span class="typed2"></span><span class="typed3"></span></h3>
+          <div class="grid-x grid-padding-x">
+            <div class="cell small-2 medium-2 large-2"></div>
+            <div class="cell small-8 medium-8 large-8">
+              <!-- Text -->
+              <div class="spacer50"></div>
+              <div class="statement">
+                <h4><span class="typed1"></span><span class="typed2"></span><span class="typed3"></span></h4>
+              </div>
+
+              <!-- Search bar -->
+              <input name='tags-outside' class='tagify--outside' placeholder='Type skills or projects here...'>
             </div>
+            <div class="cell small-2 medium-2 large-2"></div>
 
-            <!-- Search bar -->
-            <input name='tags-outside' class='tagify--outside' placeholder='Type skills or projects here...'>
-          </div>
-
-          <!-- Content -->
-          <div class="cell small-12 medium-12 large-12 projectWindow">
-            <div class="pfProjectWrap">
-              <div class="pfProject"></div>
-              <div class="pfProject"></div>
-              <div class="pfProject"></div>
-            </div>
-          </div>
-        </div>
-        </main>
-
-          <!-- Footer -->
-          <footer>
-            <div class="cell small-12 medium-12 large-12">
-              <div class="horiLine"></div>
-                <div class="centerContent">
-                  <div class="vertiText">
-                    <p>クラリジ</p>
-                    <p>純一</p>
-                    <p>ロバート</p>
-                  </div>
-                </div>
+            <!-- Content -->
+            <div class="spacer30"></div>
+            <div class="cell small-1 medium-1 large-1"></div>
+            <div class="cell small-10 medium-10 large-10 projectWindow">
+              <div class="pfProjectWrap">
+                <div class="pfProject"></div>
+                <div class="pfProject"></div>
+                <div class="pfProject"></div>
+                <div class="pfProject"></div>
+              </div>
+              <div class="pfProjectWrap">
+                <div class="pfProject"></div>
+                <div class="pfProject"></div>
+                <div class="pfProject"></div>
+                <div class="pfProject"></div>
               </div>
             </div>
-          </footer>
+            <div class="cell small-1 medium-1 large-1"></div>
+          </div>
+        </main>
 
-
+        <!-- Footer -->
+        <footer>
+          <div class="cell small-12 medium-12 large-12">
+            <div class="horiLine"></div>
+            <div class="centerContent">
+              <div class="vertiText">
+                <p>クラリッジ</p>
+                <p>純一</p>
+                <p>ロバート</p>
+              </div>
+            </div>
+          </div>
       </div>
+      </footer>
+
+
     </div>
+  </div>
 </body>
 
 </html>
