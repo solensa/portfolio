@@ -130,6 +130,9 @@
    General css
    Credit: https://foundation.zurb.com/forum/posts/53901-foundation-6-sticky-footer-pushed-down-with-off-canvas-and-flexbox-css-tutorial
    ========================================================================== */
+   .grid-y.medium-grid-frame{
+     overflow:visible !important;
+   }
 .horiLine {
   display: block;
   height: 1px;
