@@ -1,3 +1,5 @@
+
+
 // -----------------------------------------------------------------------------
 // Search bar
 // -----------------------------------------------------------------------------
@@ -38,10 +40,26 @@ $(document).ready(function() {
     console.log(e.detail);
   });
 
+  tagify.on('add', function(e){
+    console.log(e.detail.data.value);
+    bounceContent();
+  });
+
 });
 
 // -----------------------------------------------------------------------------
-// Text typing 
+// Bounce content
+// -----------------------------------------------------------------------------
+
+function bounceContent() {
+    var duration = 1;
+    TweenMax.to($(".projectWindow"), duration / 4, {y:50, ease:Power2.easeOut});
+    TweenMax.to($(".projectWindow"), duration / 2, {y:0, ease:Bounce.easeOut, delay:duration / 4});
+    console.log('projectWindow');
+  };
+
+// -----------------------------------------------------------------------------
+// Text typing
 // -----------------------------------------------------------------------------
 
 var scrolledBeyond = false;
@@ -189,3 +207,21 @@ function type3() {
     });
   }
 }
+
+
+// -----------------------------------------------------------------------------
+// Footer
+// -----------------------------------------------------------------------------
+
+$(window).bind("load", function () {
+   var footer = $("#footer");
+   var pos = footer.position();
+   var height = $(window).height();
+   height = height - pos.top;
+   height = height - footer.height();
+   if (height > 0) {
+       footer.css({
+           'margin-top': height + 'px'
+       });
+   }
+});

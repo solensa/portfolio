@@ -1,4 +1,10 @@
-
+/*
+  - Header
+  - Project Tiles
+  - Tagify
+  - General
+  - Footer
+*/
 /* =============================================================================
    Header css
    ========================================================================== */
@@ -10,51 +16,61 @@
   position: relative;
   /* -webkit-transition: -webkit-transform .8s ease-in-out;
           transition:         transform .8s ease-in-out; */
-  -webkit-transition: .8s ease-in-out;
-          transition: .8s ease-in-out;
-          left:0;
-          /* transition: left ease 0.5s; */
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  left: 0;
+  /* transition: left ease 0.5s; */
 }
+
 .pfLogo:hover {
   -webkit-transform: rotate(110deg);
-          transform: rotate(110deg);
-             left: 60px;
+  transform: rotate(110deg);
+  left: 60px;
 }
 
 .pfMe {
   visibility: hidden;
   position: absolute;
-  top:10px;
-  left:30px;
-  -webkit-transition: .5s ease-in-out;
-          transition: .5s ease-in-out;
+  top: 10px;
+  left: 30px;
+  /* the time below needs to be 5/8 of the pfLogo transition time */
+  -webkit-transition: .3125s ease-in-out;
+  transition: .3125s ease-in-out;
 }
-.pfLogo:hover ~ .pfMe{
-  transition-delay: 0.3s;
+
+.pfLogo:hover~.pfMe {
+  /* the time below needs to be 3/8 of the pfLogo transition time */
+  transition-delay: 0.1875s;
   visibility: visible;
   -webkit-transform: rotate(-30deg);
-          transform: rotate(-30deg);
-             left: 10px;
+  transform: rotate(-30deg);
+  left: 10px;
 }
 
-.pfLogoDiv { float: left; position: relative; max-width:120px; width: 100%; padding:20px;}
+.pfLogoDiv {
+  float: left;
+  position: relative;
+  max-width: 120px;
+  width: 100%;
+  padding: 20px;
+}
 
 /* =============================================================================
-   Projects css
+   Project Tiles css
    ========================================================================== */
-
-.pfProjectWrap{
+.pfProjectWrap {
   display: flex;
   flex-wrap: wrap;
   align-items: end;
 }
+
 .pfProject {
   min-width: 300px;
   /* display:inline-block; */
-  margin:5px;
-  padding:10px;
-  width:calc(100%/3 - 10px);
-  height:40px;
+  margin: 5px;
+  padding: 10px;
+  width: calc(100%/3 - 10px);
+  height: 40px;
   border: 2px solid #333;
   background-color: white;
 }
@@ -70,6 +86,7 @@
   width: 100%;
   max-width: 320px;
 }
+
 .tagify__input--outside {
   display: block;
   max-width: 600px;
@@ -77,32 +94,91 @@
   margin-top: 1.5em;
   margin-bottom: 1em;
 }
+
 .tagify tag {
   display: flex;
   align-items: top;
   margin: 8px 8px 0 0;
   height: 36px;
 }
+
 .tagify tag x::after {
   position: absolute;
   content: "\00D7";
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-.tagify tag > div {
+
+.tagify tag>div {
   background-color: #D2F4FE;
   border-radius: 15px;
   font-weight: 600;
   display: flex;
   align-items: center;
 }
+
 .tagify tag:hover div {
   background-color: #d3e2e2;
 }
-.tagify tag x:hover + div {
+
+.tagify tag x:hover+div {
   background-color: rgba(211, 148, 148, 0.3);
 }
 
-/* You're either a leader or a lemming - 重光ロバート*/
+/* =============================================================================
+   General css
+   Credit: https://foundation.zurb.com/forum/posts/53901-foundation-6-sticky-footer-pushed-down-with-off-canvas-and-flexbox-css-tutorial
+   ========================================================================== */
+.horiLine {
+  display: block;
+  height: 1px;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #cecece;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.vertiText {
+  writing-mode: vertical-rl;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.centerContent {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* =============================================================================
+   Sticky Footer css
+   Credit: https://foundation.zurb.com/forum/posts/53901-foundation-6-sticky-footer-pushed-down-with-off-canvas-and-flexbox-css-tutorial
+   ========================================================================== */
+.off-canvas-wrapper {
+  overflow: visible;
+}
+
+.off-canvas-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header, nav, footer {
+  flex-shrink: 0;
+}
+
+main {
+  flex: 1 0 auto;
+  /* Use 1 0 auto instead of just 1 for backwards compatibility with other browsers */
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+   "You're either a leader or a lemming" - 重光 ロバート
+
+   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
