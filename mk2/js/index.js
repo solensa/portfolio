@@ -4,7 +4,7 @@
 // Search bar
 // -----------------------------------------------------------------------------
 
-var jobTags = ["Account Executive", "Application Developer", "Account Manager", "Architect", "Account Representative", "Art Director", "Accountant", "Assembler", "Accounting Assistant", "Assistant", "Accounting Clerk", "Assistant Controller", "Accounting Manager", "Assistant Editor", "Accounts Payable Clerk", "Assistant Manager", "Accounts Payable Specialist", "Assistant Project Manager", "Accounts Receivable Clerk", "TextWrangler", "Tumblr", "Typekit", "Webflow", "WP Migrate DB Pro", "Zeplin"];
+var jobTags = ["DevOps","HTML","CSS"];
 
 $(document).foundation();
 $(document).ready(function() {
@@ -41,22 +41,37 @@ $(document).ready(function() {
   });
 
   tagify.on('add', function(e){
-    console.log(e.detail.data.value);
+    // console.log(e.detail.data.value);
+    tagsArr.push(e.detail.data.value);
+    refineList();
     bounceContent();
   });
 
+  tagify.on('remove', function(e){
+    // console.log(e.detail.data.value);
+    tagsArr.splice( tagsArr.indexOf(e.detail.data.value), 1 );
+    refineList();
+  });
 });
+
+// -----------------------------------------------------------------------------
+// Refine List
+// -----------------------------------------------------------------------------
+var tagsArr = [];
+function refineList(newTag) {
+
+  console.log(tagsArr)
+}
 
 // -----------------------------------------------------------------------------
 // Bounce content
 // -----------------------------------------------------------------------------
 
 function bounceContent() {
-    var duration = 1;
-    TweenMax.to($(".projectWindow"), duration / 4, {y:50, ease:Power2.easeOut});
-    TweenMax.to($(".projectWindow"), duration / 2, {y:0, ease:Bounce.easeOut, delay:duration / 4});
-    console.log('projectWindow');
-  };
+  var duration = 1;
+  TweenMax.to($(".projectWindow"), duration / 4, {y:50, ease:Power2.easeOut});
+  TweenMax.to($(".projectWindow"), duration / 2, {y:0, ease:Bounce.easeOut, delay:duration / 4});
+};
 
 // -----------------------------------------------------------------------------
 // Text typing
