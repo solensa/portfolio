@@ -58,7 +58,7 @@
 }
 
 /* =============================================================================
-   Text + image
+   Header Text + image
    ========================================================================== */
 .pfHeadImage{
   display:inline-block;
@@ -68,11 +68,12 @@
   float:left;
 }
 .pfStatement{
-  display:inline-block;
-  float:left;
+  display:block;
+  /* float:left; */
   width:60%;
-  height:200px;
-
+  height:170px;
+  text-align:center;
+  margin:0 auto;
 }
 
 /* =============================================================================
@@ -115,6 +116,7 @@
   color:white;
   writing-mode: vertical-rl;
   text-orientation: upright;
+  letter-spacing: -2px;
 }
 
 /* Grow */
@@ -148,8 +150,8 @@
 }
 .hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.06);
+  transform: scale(1.06);
   z-index: 1;
 }
 
@@ -261,6 +263,8 @@ input {
   justify-content: center;
 }
 
+.spacer10 {height:10px;width:100%;display:block;clear:both;}
+.spacer20 {height:20px;width:100%;display:block;clear:both;}
 .spacer30 {height:30px;width:100%;display:block;clear:both;}
 .spacer40 {height:40px;width:100%;display:block;clear:both;}
 .spacer50 {height:50px;width:100%;display:block;clear:both;}

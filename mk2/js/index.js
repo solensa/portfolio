@@ -142,7 +142,7 @@ $(".wrapper").click(function() {
 var typed1, typed2, typed3;
 $(function() {
   typed1 = new Typed('.typed1', {
-    strings: ["Hello, I'm Robert Claridge.", "Hello, I'm Robert Claridge.<br>Nice to meet you!", "Hello, I'm Robert Claridge.<br>I'm passionate about&nbsp;"],
+    strings: ["<strong>Hello, I'm Robert Claridge.</strong>", "<strong>Hello, I'm Robert Claridge.</strong><div class='spacer10'></div>Nice to meet you!", "<strong>Hello, I'm Robert Claridge.</strong><div class='spacer10'></div>I'm passionate about&nbsp;"],
     typeSpeed: typeSpeedText,
     showCursor: false,
     backDelay: 1500,
