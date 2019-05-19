@@ -1,13 +1,11 @@
-
-
 // -----------------------------------------------------------------------------
 // Search bar
 // -----------------------------------------------------------------------------
 
-var jobTags = ["DevOps","HTML","CSS"];
-
 $(document).foundation();
 $(document).ready(function() {
+
+  updatePfTitles();
 
   var input = document.querySelector('input[name=tags-outside]'),
     // init Tagify script on the above inputs
@@ -23,7 +21,7 @@ $(document).ready(function() {
       //               </div>
       //           </tag>`;
       // },
-      whitelist: jobTags,
+      whitelist: uniqueProjectArray.sort(),
       dropdown: {
         enabled: 2,
       }
@@ -40,17 +38,17 @@ $(document).ready(function() {
     console.log(e.detail);
   });
 
-  tagify.on('add', function(e){
+  tagify.on('add', function(e) {
     // console.log(e.detail.data.value);
-    tagsArr.push(e.detail.data.value.toLowerCase());
+    tagsArr.push(e.detail.data.value.toLowerCase().replace(/\s+/g, ''));
     refineList();
     bounceContent();
   });
 
-  tagify.on('remove', function(e){
+  tagify.on('remove', function(e) {
     // console.log(e.detail.data.value);
     bounceContent2();
-    tagsArr.splice( tagsArr.indexOf(e.detail.data.value), 1 );
+    tagsArr.splice(tagsArr.indexOf(e.detail.data.value.toLowerCase().replace(/\s+/g, '')), 1);
     refineList();
   });
 });
@@ -59,15 +57,16 @@ $(document).ready(function() {
 // Refine List
 // -----------------------------------------------------------------------------
 var tagsArr = [];
-function refineList() {
 
-  if (tagsArr.length>0){
-    for (i = 0; i < projectTagsArray.length; i++){
-      if (!tagsArr.some(val => projectTagsArray[i].indexOf(val) === -1)){
-        console.log(projectTagsArray[i][0]);
-        $( "#"+projectTagsArray[i][0]).show();
+function refineList() {
+  console.log(tagsArr);
+  if (tagsArr.length > 0) {
+    for (i = 0; i < projectTagsArray.length; i++) {
+      if (!tagsArr.some(val => projectTagsArray[i].indexOf(val) === -1)) {
+        // console.log(projectTagsArray[i][0]);
+        $("#" + projectTagsArray[i][0]).show();
       } else {
-        $( "#"+projectTagsArray[i][0]).hide();
+        $("#" + projectTagsArray[i][0]).hide();
       }
     }
   } else {
@@ -77,18 +76,80 @@ function refineList() {
 }
 
 // -----------------------------------------------------------------------------
+// Populate tile titles
+// -----------------------------------------------------------------------------
+var letterLimit = 9;
+var htmlStr = "";
+
+function updatePfTitles() {
+  for (i = 0; i < projectTagsArray.length; i++) {
+    for (j = 0; j < uniqueProjectArray.length; j++) {
+      if (projectTagsArray[i][0] == uniqueProjectArray[j].toLowerCase().replace(/\s+/g, '')) {
+        if (countWords(uniqueProjectArray[j]) == 1) {
+          htmlStr = "<div class='pfTitle pfTitleAlone'>" + uniqueProjectArray[j].toUpperCase() + "</div>";
+          $("#" + projectTagsArray[i][0]).find('.pfTitleInput').append(htmlStr);
+        } else if (countWords(uniqueProjectArray[j]) == 2) {
+          wordsArr = uniqueProjectArray[j].split(' ');
+          // word length combined adds to more than the limit of the tile, get it onto a new line
+          if ((wordsArr[0].length + wordsArr[1].length) <= letterLimit) {
+            htmlStr = "<div class='pfTitle pfTitleAlone'>" + uniqueProjectArray[j].toUpperCase() + "</div>";
+          } else {
+            htmlStr = "<div class='pfTitle pfTitleStart'>" + wordsArr[0].toUpperCase() + "</div><div class='pfTitle pfTitleEnd'>" + wordsArr[1].toUpperCase() + "</div>";
+          }
+          $("#" + projectTagsArray[i][0]).find('.pfTitleInput').append(htmlStr);
+        } else if (countWords(uniqueProjectArray[j]) == 3) {
+          wordsArr = uniqueProjectArray[j].split(' ');
+          // word length combined adds to more than the limit of the tile, get it onto a new line
+          if ((wordsArr[0].length + wordsArr[1].length + wordsArr[2].length) <= letterLimit) {
+            htmlStr = "<div class='pfTitle pfTitleAlone'>" + uniqueProjectArray[j].toUpperCase() + "</div>";
+          } else if ((wordsArr[0].length + wordsArr[1].length) <= letterLimit) {
+            htmlStr = "<div class='pfTitle pfTitleStart'>" + wordsArr[0].toUpperCase() + " " + wordsArr[1].toUpperCase() + "</div><div class='pfTitle pfTitleEnd'>" + wordsArr[2].toUpperCase() + "</div>";
+          } else if ((wordsArr[1].length + wordsArr[2].length) <= letterLimit) {
+            htmlStr = "<div class='pfTitle pfTitleStart'>" + wordsArr[0].toUpperCase() + "</div><div class='pfTitle pfTitleEnd'>" + wordsArr[1].toUpperCase() + " " + wordsArr[2].toUpperCase() + "</div>";
+          } else {
+            htmlStr = "<div class='pfTitle pfTitleStart'>" + wordsArr[0].toUpperCase() + "</div><div class='pfTitle pfTitleMid'>" + wordsArr[1].toUpperCase() + "</div><div class='pfTitle pfTitleEnd'>" + wordsArr[2].toUpperCase() + "</div>";
+          }
+
+          $("#" + projectTagsArray[i][0]).find('.pfTitleInput').append(htmlStr);
+        }
+      }
+    }
+  }
+}
+
+function countWords(str) {
+  return str.split(' ').length;
+}
+
+
+// -----------------------------------------------------------------------------
 // Bounce content
 // -----------------------------------------------------------------------------
 
 function bounceContent() {
   var duration = 1;
-  TweenMax.to($(".projectWindow"), duration / 4, {y:50, ease:Power2.easeOut});
-  TweenMax.to($(".projectWindow"), duration / 2, {y:0, ease:Bounce.easeOut, delay:duration / 4});
+  TweenMax.to($(".projectWindow"), duration / 4, {
+    y: 50,
+    ease: Power2.easeOut
+  });
+  TweenMax.to($(".projectWindow"), duration / 2, {
+    y: 0,
+    ease: Bounce.easeOut,
+    delay: duration / 4
+  });
 };
+
 function bounceContent2() {
   var duration = 1;
-  TweenMax.to($(".projectWindow"), duration / 4, {y:50, ease:Power2.easeOut});
-  TweenMax.to($(".projectWindow"), duration / 2, {y:0, ease:Bounce.easeOut, delay:duration / 4});
+  TweenMax.to($(".projectWindow"), duration / 4, {
+    y: 50,
+    ease: Power2.easeOut
+  });
+  TweenMax.to($(".projectWindow"), duration / 2, {
+    y: 0,
+    ease: Bounce.easeOut,
+    delay: duration / 4
+  });
 };
 
 // -----------------------------------------------------------------------------
@@ -142,7 +203,7 @@ $(".wrapper").click(function() {
 var typed1, typed2, typed3;
 $(function() {
   typed1 = new Typed('.typed1', {
-    strings: ["<strong>Hello, I'm Robert Claridge.</strong>", "<strong>Hello, I'm Robert Claridge.</strong><div class='spacer10'></div>Nice to meet you!", "<strong>Hello, I'm Robert Claridge.</strong><div class='spacer10'></div>I'm passionate about&nbsp;"],
+    strings: ["<strong>Hello, I'm Robert Claridge.</strong>", "<strong>Hello, I'm Robert Claridge.</strong><div class='spacer10'></div>Welcome to my portfolio!", "<strong>Hello, I'm Robert Claridge.</strong><div class='spacer10'></div>I'm passionate about&nbsp;"],
     typeSpeed: typeSpeedText,
     showCursor: false,
     backDelay: 1500,
@@ -246,15 +307,16 @@ function type3() {
 // Footer
 // -----------------------------------------------------------------------------
 
-$(window).bind("load", function () {
-   var footer = $("#footer");
-   var pos = footer.position();
-   var height = $(window).height();
-   height = height - pos.top;
-   height = height - footer.height();
-   if (height > 0) {
-       footer.css({
-           'margin-top': height + 'px'
-       });
-   }
+$(window).bind("load", function() {
+  var footer = $("footer");
+  var pos = footer.position();
+  var height = $(window).height();
+  console.log(footer.position());
+  height = height - pos.top;
+  height = height - footer.height();
+  if (height > 0) {
+    footer.css({
+      'margin-top': height + 'px'
+    });
+  }
 });

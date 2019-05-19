@@ -106,17 +106,27 @@
   height:50%;
   background-color: #222;
 }
+
 .pfTitle {
-  position:absolute;
-  top:10px;
-  right:10px;
-  padding:10px;
   max-height:190px;
   background-color: rgba(0, 0, 0, 0.3);
   color:white;
   writing-mode: vertical-rl;
   text-orientation: upright;
   letter-spacing: -2px;
+  float:right;
+}
+.pfTitleAlone {
+  padding:10px;
+}
+.pfTitleStart {
+  padding:10px 6px 6px 3px;
+}
+.pfTitleMid{
+  padding:10px 3px 6px 3px;
+}
+.pfTitleEnd{
+  padding:10px 3px 6px 6px;
 }
 
 /* Grow */
