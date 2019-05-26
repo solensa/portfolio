@@ -6,6 +6,38 @@ $(document).foundation();
 $(document).ready(function() {
 
   updatePfTitles();
+  $(function() {
+    $(".gifHover").hover(
+      function() {
+        if ($(this).attr('id') == "lightning368" ){
+          $(this).find('img').attr("src", "assets/images/ln3683.gif");
+        }
+        else if ($(this).attr('id') == "athlete" ){
+          $(this).find('img').attr("src", "assets/images/meSailing.gif");
+        }
+        else if ($(this).attr('id') == "analysingtreemorphology" ){
+          $(this).find('img').attr("src", "assets/images/trees.gif");
+        }
+        else if ($(this).attr('id') == "machinelearningchatbot" ){
+          $(this).find('img').attr("src", "assets/images/ga.gif");
+        }
+      },
+      function() {
+        if ($(this).attr('id') == "lightning368" ){
+          $(this).find('img').attr("src", "assets/images/ln368.png");
+        }
+        else if ($(this).attr('id') == "athlete" ){
+          $(this).find('img').attr("src", "assets/images/meSailing.png");
+        }
+        else if ($(this).attr('id') == "analysingtreemorphology" ){
+          $(this).find('img').attr("src", "assets/images/trees.png");
+        }
+        else if ($(this).attr('id') == "machinelearningchatbot" ){
+          $(this).find('img').attr("src", "assets/images/ga.png");
+        }
+      }
+    );
+  });
 
   var input = document.querySelector('input[name=tags-outside]'),
     // init Tagify script on the above inputs
@@ -52,6 +84,8 @@ $(document).ready(function() {
     refineList();
   });
 });
+
+
 
 // -----------------------------------------------------------------------------
 // Refine List
