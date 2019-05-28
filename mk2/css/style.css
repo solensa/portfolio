@@ -12,7 +12,9 @@
    ========================================================================== */
 .pfLogoDiv {
   float: left;
-  position: relative;
+  /* position: relative; */
+  position: fixed;
+  margin-top: 15px;
   max-width: 120px;
   width: 100%;
   padding: 20px;
@@ -133,8 +135,8 @@
   /* float:left; */
   width:60%;
   height:170px;
-  text-align:center;
-  margin:0 auto;
+  /* text-align:center; */
+  /* margin:0 auto; */
 }
 
 /* =============================================================================
@@ -266,8 +268,8 @@
 .tagify--outside {
   border: 0;
   padding: 0;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   display: flex;
   width: 100%;
   max-width: 600px;
@@ -280,8 +282,8 @@
   border-radius: 5px;
   margin-top: 1.5em;
   margin-bottom: 1em;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 .tagify tag {
@@ -346,10 +348,11 @@ input {
 }
 
 .centerContent {
-  width: 100%;
+  margin-left: 19px;
+  /* width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .spacer10 {height:10px;width:100%;display:block;clear:both;}

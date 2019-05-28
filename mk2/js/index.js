@@ -28,6 +28,8 @@ $(document).ready(function() {
           $(this).find('img').attr("src", "assets/images/naughtyCoinDice.gif");
         } else if ($(this).attr('id') == "salternssailingacademy" ){
           $(this).find('img').attr("src", "assets/images/salterns2.gif");
+        } else if ($(this).attr('id') == "spiritofscrum" ){
+          $(this).find('img').attr("src", "assets/images/spiritofscrum.gif");
         }
       },
       function() {
@@ -50,6 +52,8 @@ $(document).ready(function() {
           $(this).find('img').attr("src", "assets/images/naughtyCoinDice.png");
         } else if ($(this).attr('id') == "salternssailingacademy" ){
           $(this).find('img').attr("src", "assets/images/salterns.png");
+        } else if ($(this).attr('id') == "spiritofscrum" ){
+          $(this).find('img').attr("src", "assets/images/spiritofscrum.png");
         }
       }
     );
