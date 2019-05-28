@@ -21,6 +21,14 @@ $(document).ready(function() {
         else if ($(this).attr('id') == "machinelearningchatbot" ){
           $(this).find('img').attr("src", "assets/images/ga.gif");
         }
+        else if ($(this).attr('id') == "illustrations" ){
+          $(this).find('img').attr("src", "assets/images/illust.gif");
+        }
+        else if ($(this).attr('id') == "naughtycoinanddice" ){
+          $(this).find('img').attr("src", "assets/images/naughtyCoinDice.gif");
+        } else if ($(this).attr('id') == "salternssailingacademy" ){
+          $(this).find('img').attr("src", "assets/images/salterns2.gif");
+        }
       },
       function() {
         if ($(this).attr('id') == "lightning368" ){
@@ -34,6 +42,14 @@ $(document).ready(function() {
         }
         else if ($(this).attr('id') == "machinelearningchatbot" ){
           $(this).find('img').attr("src", "assets/images/ga.png");
+        }
+        else if ($(this).attr('id') == "illustrations" ){
+          $(this).find('img').attr("src", "assets/images/illust.png");
+        }
+        else if ($(this).attr('id') == "naughtycoinanddice" ){
+          $(this).find('img').attr("src", "assets/images/naughtyCoinDice.png");
+        } else if ($(this).attr('id') == "salternssailingacademy" ){
+          $(this).find('img').attr("src", "assets/images/salterns.png");
         }
       }
     );
@@ -143,6 +159,12 @@ function updatePfTitles() {
           } else {
             htmlStr = "<div class='pfTitle pfTitleStart'>" + wordsArr[0].toUpperCase() + "</div><div class='pfTitle pfTitleMid'>" + wordsArr[1].toUpperCase() + "</div><div class='pfTitle pfTitleEnd'>" + wordsArr[2].toUpperCase() + "</div>";
           }
+
+          $("#" + projectTagsArray[i][0]).find('.pfTitleInput').append(htmlStr);
+        } else if (countWords(uniqueProjectArray[j]) == 4) {
+          wordsArr = uniqueProjectArray[j].split(' ');
+          // word length combined adds to more than the limit of the tile, get it onto a new line
+          htmlStr = "<div class='pfTitle pfTitleStart'>" + wordsArr[0].toUpperCase() + " " + wordsArr[1].toUpperCase() + "</div><div class='pfTitle pfTitleEnd'>" + wordsArr[2].toUpperCase() + " " + wordsArr[3].toUpperCase() + "</div>";
 
           $("#" + projectTagsArray[i][0]).find('.pfTitleInput').append(htmlStr);
         }
