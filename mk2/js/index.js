@@ -6,7 +6,9 @@ $(document).foundation();
 $(document).ready(function() {
 
   updatePfTitles();
+  main();
   $(function() {
+
     $(".gifHover").hover(
       function() {
         if ($(this).attr('id') == "lightning368" ){
@@ -233,7 +235,7 @@ $(window).bind('scroll', function() {
   console.log('scroll');
   if (!somethingIsMoving) {
     // console.log("scrolledBeyond: "+ scroll + " : " +scrolledBeyond);
-    if ($(window).scrollTop() > 100 && !scrolledBeyond) {
+    if ($(window).scrollTop() > 10 && !scrolledBeyond) {
       scrolledBeyond = true;
       somethingIsMoving = true;
       // console.log('scrolled beyond 200')
@@ -242,7 +244,7 @@ $(window).bind('scroll', function() {
         typed2.start();
       }
 
-    } else if ($(window).scrollTop() < 100 && scrolledBeyond) {
+    } else if ($(window).scrollTop() < 10 && scrolledBeyond) {
       scrolledBeyond = false;
       somethingIsMoving = true;
       // console.log('scrolled under 100')
@@ -263,7 +265,7 @@ $(".wrapper").click(function() {
 var typed1, typed2, typed3;
 $(function() {
   typed1 = new Typed('.typed1', {
-    strings: ["<strong>Hello, I'm Robert Claridge.</strong>", "<strong>Hello, I'm Robert Claridge.</strong><div class='spacer10'></div>Welcome to my portfolio!", "<strong>Hello, I'm Robert Claridge.</strong><div class='spacer10'></div>I'm passionate about&nbsp;"],
+    strings: ["<strong>Hello, I'm Robert Claridge.</strong>", "<strong>Hello, I'm Robert Claridge.</strong><div class='spacer0'></div>Welcome to my portfolio!", "<strong>Hello, I'm Robert Claridge.</strong><div class='spacer0'></div>I'm passionate about&nbsp;"],
     typeSpeed: typeSpeedText,
     showCursor: false,
     backDelay: 1500,
@@ -360,6 +362,38 @@ function type3() {
       },
     });
   }
+}
+
+// -----------------------------------------------------------------------------
+// Footer
+// -----------------------------------------------------------------------------
+
+function main(){
+	var menu = $('#menu');
+  var whiteTop = $('#whiteTop');
+  var pfStatement = $('.pfStatement');
+	$(document).scroll(function(){
+    // subtract menu tops from one another to get the value below
+		if ( $(this).scrollTop() >=130 ){
+		    menu.removeClass('bottom').addClass('top')
+        whiteTop.addClass('shadow')
+		} else {
+		    menu.removeClass('top').addClass('bottom')
+        whiteTop.removeClass('shadow')
+		}
+
+    if ( $(this).scrollTop() >0 ){
+		    whiteTop.removeClass('bottom').addClass('top')
+		} else {
+		    whiteTop.removeClass('top').addClass('bottom')
+		}
+
+    if ( $(this).scrollTop() >=25 ){
+		    pfStatement.removeClass('bottom').addClass('top')
+		} else {
+		    pfStatement.removeClass('top').addClass('bottom')
+		}
+	})
 }
 
 
