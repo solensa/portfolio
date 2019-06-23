@@ -214,7 +214,7 @@
 .pfThumbnail {
   /* padding:10px; */
   height:60%;
-  background-color: #333;
+  /* background-color: #333; */
   overflow:hidden;
 }
 .pfThumbnail img{

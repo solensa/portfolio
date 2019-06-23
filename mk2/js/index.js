@@ -32,6 +32,16 @@ $(document).ready(function() {
           $(this).find('img').attr("src", "assets/images/salterns2.gif");
         } else if ($(this).attr('id') == "spiritofscrum" ){
           $(this).find('img').attr("src", "assets/images/spiritofscrum.gif");
+        } else if ($(this).attr('id') == "masterplan" ){
+          $(this).find('img').attr("src", "assets/images/masterplan.gif");
+        } else if ($(this).attr('id') == "feedme" ){
+          $(this).find('img').attr("src", "assets/images/feedme.gif");
+        } else if ($(this).attr('id') == "sofa" ){
+          $(this).find('img').attr("src", "assets/images/sofa.gif");
+        } else if ($(this).attr('id') == "orgtree" ){
+          $(this).find('img').attr("src", "assets/images/orgtree.gif");
+        } else if ($(this).attr('id') == "acrolist" ){
+          $(this).find('img').attr("src", "assets/images/acrolist.gif");
         }
       },
       function() {
@@ -56,6 +66,16 @@ $(document).ready(function() {
           $(this).find('img').attr("src", "assets/images/salterns.png");
         } else if ($(this).attr('id') == "spiritofscrum" ){
           $(this).find('img').attr("src", "assets/images/spiritofscrum.png");
+        } else if ($(this).attr('id') == "masterplan" ){
+          $(this).find('img').attr("src", "assets/images/masterplan.png");
+        }else if ($(this).attr('id') == "feedme" ){
+          $(this).find('img').attr("src", "assets/images/feedme.png");
+        }else if ($(this).attr('id') == "sofa" ){
+          $(this).find('img').attr("src", "assets/images/sofa.png");
+        } else if ($(this).attr('id') == "orgtree" ){
+          $(this).find('img').attr("src", "assets/images/orgtree.svg");
+        } else if ($(this).attr('id') == "acrolist" ){
+          $(this).find('img').attr("src", "assets/images/acrolist.png");
         }
       }
     );
