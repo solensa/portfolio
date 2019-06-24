@@ -42,6 +42,12 @@ $(document).ready(function() {
           $(this).find('img').attr("src", "assets/images/orgtree.gif");
         } else if ($(this).attr('id') == "acrolist" ){
           $(this).find('img').attr("src", "assets/images/acrolist.gif");
+        } else if ($(this).attr('id') == "passimal" ){
+          $(this).find('img').attr("src", "assets/images/passimal.gif");
+        } else if ($(this).attr('id') == "learningstylequiz" ){
+          $(this).find('img').attr("src", "assets/images/shirts.gif");
+        } else if ($(this).attr('id') == "evabuild" ){
+          $(this).find('img').attr("src", "assets/images/evabuild.gif");
         }
       },
       function() {
@@ -76,6 +82,12 @@ $(document).ready(function() {
           $(this).find('img').attr("src", "assets/images/orgtree.svg");
         } else if ($(this).attr('id') == "acrolist" ){
           $(this).find('img').attr("src", "assets/images/acrolist.png");
+        } else if ($(this).attr('id') == "passimal" ){
+          $(this).find('img').attr("src", "assets/images/passimal.png");
+        } else if ($(this).attr('id') == "learningstylequiz" ){
+          $(this).find('img').attr("src", "assets/images/shirts.png");
+        } else if ($(this).attr('id') == "evabuild" ){
+          $(this).find('img').attr("src", "assets/images/evabuild.png");
         }
       }
     );
