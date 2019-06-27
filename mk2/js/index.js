@@ -48,6 +48,8 @@ $(document).ready(function() {
           $(this).find('img').attr("src", "assets/images/shirts.gif");
         } else if ($(this).attr('id') == "evabuild" ){
           $(this).find('img').attr("src", "assets/images/evabuild.gif");
+        } else if ($(this).attr('id') == "atom" ){
+          $(this).find('img').attr("src", "assets/images/atom.gif");
         }
       },
       function() {
@@ -88,6 +90,8 @@ $(document).ready(function() {
           $(this).find('img').attr("src", "assets/images/shirts.png");
         } else if ($(this).attr('id') == "evabuild" ){
           $(this).find('img').attr("src", "assets/images/evabuild.png");
+        } else if ($(this).attr('id') == "atom" ){
+          $(this).find('img').attr("src", "assets/images/atom.png");
         }
       }
     );
