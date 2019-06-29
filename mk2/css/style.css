@@ -21,6 +21,11 @@
   z-index: 6;
 }
 
+
+body {
+  overflow-x:hidden;
+}
+
 /* -------------------------------------------------------------------------- */
 /*
 .pfLogo {
@@ -62,6 +67,10 @@
 } */
 
 /* -------------------------------------------------------------------------- */
+
+.pfText {
+  font-size:14px;
+}
 
 .pfLogo {
   z-index: 1;
@@ -516,3 +525,75 @@ main {
    "You're either a leader or a lemming" - 重光 ロバート
 
    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+   .pfProject {
+   	min-width: 100px;
+   	/* display: inline-block; */
+   	margin: 0px 10px 30px 20px;
+   	padding: 10px;
+   	width: calc(100%/4 - 10px);
+   	height: 290px;
+   	border: 2px solid #cecece;
+   	background-color: white;
+   	max-width: 295px;
+   	border-radius: 4px;
+   	border: 1px solid #e3e3e3;
+   }
+
+.pfTitleAlone {
+ 	padding: 9px 3px;
+ 	border-top: 3px solid #000;
+ }
+
+ .pfText {
+ 	padding: 27px 10px 0px 7px;
+ 	/* height: 40%; */
+ 	/* background-color: #222; */
+ 	line-height: 17px;
+ 	color: #393939;
+ 	font-size: 13px;
+ }
+
+ .pfTitle {
+	max-height: 225.6px;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	letter-spacing: 0px;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	border-top: 3px solid #000;
+}
+
+.filterButton {
+	display: inline-block;
+	padding: 9px 24px 7px;
+	border: 1px solid #b4eccc;
+	border-radius: 4px;
+	transition: all 0.2s ease-in;
+	position: relative;
+	overflow: hidden;
+	color: #afe0cb;
+	font-size: 14px;
+}
+
+#whiteTop.shadow {
+	box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.2);
+}
+
+body .tagify__input {
+  margin-left:0px;
+}
+
+body .tagify__input--outside {
+	display: block;
+	max-width: 600px;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+	/* margin-left: auto; */
+	/* margin-right: auto; */
+}
