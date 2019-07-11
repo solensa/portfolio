@@ -1,0 +1,605 @@
+/*
+  - Header
+  - Project Tiles
+  - Tagify
+  - General
+  - Footer
+  ------------------
+  border-colors: #cecece
+*/
+/* =============================================================================
+   Header css
+   ========================================================================== */
+.pfLogoDiv {
+  float: left;
+  /* position: relative; */
+  position: fixed;
+  margin-top: 15px;
+  max-width: 120px;
+  width: 100%;
+  padding: 20px;
+  z-index: 6;
+}
+
+
+body {
+  overflow-x:hidden;
+}
+
+/* -------------------------------------------------------------------------- */
+/*
+.pfLogo {
+  z-index: 1;
+  position: relative;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  left: 0;
+}
+
+.pfLogo:hover {
+  -webkit-transform: rotate(110deg);
+  transform: rotate(110deg);
+  left: 60px;
+
+  -webkit-filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, .7));
+}
+
+.pfMe {
+  visibility: hidden;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  /* the time below needs to be 5/8 of the pfLogo transition time
+  -webkit-transition: .3125s ease-in-out;
+  transition: .3125s ease-in-out;
+}
+
+.pfLogo:hover~.pfMe {
+  /* the time below needs to be 3/8 of the pfLogo transition time
+  transition-delay: 0.1875s;
+  visibility: visible;
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  left: 10px;
+  -webkit-filter: drop-shadow( 0px 0px 2px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 0px 0px 2px rgba(0, 0, 0, .7));
+} */
+
+/* -------------------------------------------------------------------------- */
+
+.pfText {
+  font-size:14px;
+}
+
+.pfLogo {
+  z-index: 1;
+  position: relative;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  /* left: 0; */
+}
+
+.pfLogoDiv:hover .pfLogo{
+  /* -webkit-transform: rotate(240deg); */
+  transform: rotate(240deg);
+  transform-origin: 40px 78px;
+  /* transform-style: preserve-3D; */
+
+  -webkit-filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, .7));
+}
+
+.pfMe {
+  /* visibility: hidden; */
+  visibility: visible;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.pfMe2 {
+  visibility: visible;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width:100px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+.pfLogoDiv:hover .pfMe {
+  /* the time below needs to be 3/8 of the pfLogo transition time */
+  /* transition-delay: 0.1875s; */
+  visibility: visible;
+  /* -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg); */
+  /* left: 10px; */
+}
+.pfLogoDiv:hover .pfMe2 {
+  /* the time below needs to be 3/8 of the pfLogo transition time */
+  /* transition-delay: 0.1875s; */
+  visibility: visible;
+  /* -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg); */
+  /* left: 10px; */
+  transform: rotate(120deg);
+  transform-origin: 50px 88px;
+  -webkit-filter: drop-shadow( 0px 0px 2px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 0px 0px 2px rgba(0, 0, 0, .7));
+}
+
+/* =============================================================================
+   Fixed banner
+   ========================================================================== */
+
+#menu {
+   /* left: 0;
+   background-color: red; */
+   width: 100%;
+   z-index: 6;
+}
+
+#menu.bottom {
+   position: absolute;
+   top: 220px;
+}
+
+#menu.top {
+   position: fixed;
+   top: 90px;
+}
+
+#whiteTop {
+  position: absolute;
+  height: 170px;
+  width:100%;
+  background-color: white;
+  /* background: linear-gradient(to bottom, white 80%, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); */
+  z-index: 5;
+}
+#whiteTop.bottom {
+   position: absolute;
+   top: 0;
+   transition-duration: 0.5s;
+}
+#whiteTop.top {
+  position: fixed;
+  top: 0;
+  transition-duration: 0.5s;
+}
+#whiteTop.shadow {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+/* =============================================================================
+   Header Text + image
+   ========================================================================== */
+.pfHeadImage{
+  display:inline-block;
+  width:30%;
+  height:200px;
+  background-color: #333;
+  float:left;
+}
+.pfStatement{
+  display:block;
+  /* float:left; */
+  width:60%;
+  height:170px;
+  /* text-align:center; */
+  /* margin:0 auto; */
+  position:absolute;
+  z-index:5;
+}
+.pfStatement.bottom {
+   position: absolute;
+   top: 55px;
+}
+.pfStatement.top {
+  position: fixed;
+  top: 30px;
+}
+
+/* =============================================================================
+   Project Tiles css
+   ========================================================================== */
+.pfProjectWrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+}
+
+.pfProject {
+  min-width: 100px;
+  /* display:inline-block; */
+  margin: 5px;
+  padding: 10px;
+  width: calc(100%/4 - 10px);
+  height: 400px;
+  border: 2px solid #cecece;
+  background-color: white;
+}
+
+/* https://w3bits.com/css-image-hover-zoom/ */
+.pfThumbnail {
+  /* padding:10px; */
+  height:60%;
+  /* background-color: #333; */
+  overflow:hidden;
+}
+.pfThumbnail img{
+  /* overflow: hidden; */
+  transition: transform .25s ease;
+  max-width: 100%;
+  float:right;
+}
+.pfProject:hover img {
+  transform: scale(1.3);
+}
+
+.pfText {
+  padding:10px;
+  height:40%;
+  /* background-color: #222; */
+}
+
+.pfTitleInput {
+  z-index: 1;
+  position:absolute;
+  width: calc(100% - 20px);
+}
+
+.pfTitle {
+  max-height:225.6px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color:white;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: -2px;
+  float:left;
+}
+.pfTitleAlone {
+  padding:10px;
+}
+.pfTitleStart {
+  padding:10px 6px 6px 3px;
+}
+.pfTitleMid{
+  padding:10px 3px 6px 3px;
+}
+.pfTitleEnd{
+  padding:10px 3px 6px 6px;
+}
+
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.hvr-grow-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.06);
+  transform: scale(1.06);
+  z-index: 1;
+}
+
+/* Shadow */
+.hvr-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+.hvr-shadow:hover, .hvr-shadow:focus, .hvr-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* =============================================================================
+   Button css
+   ========================================================================== */
+   @import url(https://fonts.googleapis.com/css?family=Ubuntu:700&subset=latin,latin-ext);
+   body {
+     /* background: url("http://thecodeplayer.com/uploads/media/geometry.png"); */
+     font-family: 'Ubuntu', sans-serif;
+   }
+
+   a {
+     text-decoration: none;
+     color: #4f4f4f;
+   }
+
+   .filterButton-container {
+     padding: 10px 10px 10px 0;
+     display: inline;
+     /* text-align: center; */
+   }
+
+   .filterButton {
+     display: inline-block;
+     padding: 12px 24px;
+     border: 1px solid #4f4f4f;
+     border-radius: 4px;
+     transition: all 0.2s ease-in;
+     position: relative;
+     overflow: hidden;
+   }
+   .filterButton:before {
+     content: "";
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%) scaleY(1) scaleX(1.25);
+     top: 100%;
+     width: 140%;
+     height: 180%;
+     background-color: rgba(0, 0, 0, 0.05);
+     border-radius: 50%;
+     display: block;
+     transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+     z-index: -1;
+   }
+   .filterButton:after {
+     content: "";
+     position: absolute;
+     left: 55%;
+     transform: translateX(-50%) scaleY(1) scaleX(1.45);
+     top: 180%;
+     width: 160%;
+     height: 190%;
+     background-color: #39bda7;
+     border-radius: 50%;
+     display: block;
+     transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+     z-index: -1;
+   }
+   .filterButton:hover {
+     color: #ffffff;
+     border: 1px solid #39bda7;
+   }
+   .filterButton:hover:before {
+     top: -35%;
+     background-color: #39bda7;
+     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+   }
+   .filterButton:hover:after {
+     top: -45%;
+     background-color: #39bda7;
+     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+   }
+
+/* =============================================================================
+   Tagify css
+   ========================================================================== */
+.tagify--outside {
+  border: 0;
+  padding: 0;
+  /* margin-left: auto;
+  margin-right: auto; */
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+}
+
+.tagify__input--outside {
+  display: block;
+  max-width: 600px;
+  border: 2px solid #cecece;
+  border-radius: 5px;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.tagify tag {
+  display: flex;
+  align-items: top;
+  margin: 8px 8px 0 0;
+  height: 36px;
+}
+
+.tagify tag x::after {
+  position: absolute;
+  content: "\00D7";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tagify tag>div {
+  background-color: #d3e2e2;
+  border-radius: 5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.tagify tag:hover div {
+  background-color: #D2F4FE;
+  --tag-hover: #D2F4FE;
+}
+
+.tagify tag x:hover+div {
+  background-color: rgba(211, 148, 148, 0.1);
+
+}
+input {
+  display:block;
+  margin:0 auto;
+}
+
+/* =============================================================================
+   General css
+   Credit: https://foundation.zurb.com/forum/posts/53901-foundation-6-sticky-footer-pushed-down-with-off-canvas-and-flexbox-css-tutorial
+   ========================================================================== */
+ .grid-y.medium-grid-frame{
+   overflow:visible !important;
+ }
+.horiLine {
+  display: block;
+  height: 1px;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #cecece;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.vertiText {
+  writing-mode: vertical-rl;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.centerContent {
+  margin-left: 19px;
+  /* width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
+}
+.spacer10 {height:0;width:100%;display:block;clear:both;}
+.spacer10 {height:10px;width:100%;display:block;clear:both;}
+.spacer20 {height:20px;width:100%;display:block;clear:both;}
+.spacer30 {height:30px;width:100%;display:block;clear:both;}
+.spacer40 {height:40px;width:100%;display:block;clear:both;}
+.spacer50 {height:50px;width:100%;display:block;clear:both;}
+.spacer60 {height:60px;width:100%;display:block;clear:both;}
+.spacer70 {height:70px;width:100%;display:block;clear:both;}
+.spacer80 {height:80px;width:100%;display:block;clear:both;}
+.spacer220 {height:220px;width:100%;display:block;clear:both;}
+
+/* =============================================================================
+   Sticky Footer css
+   Credit: https://foundation.zurb.com/forum/posts/53901-foundation-6-sticky-footer-pushed-down-with-off-canvas-and-flexbox-css-tutorial
+   ========================================================================== */
+.off-canvas-wrapper {
+  overflow: visible;
+}
+
+.off-canvas-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header, nav, footer {
+  flex-shrink: 0;
+}
+
+main {
+  flex: 1 0 auto;
+  /* Use 1 0 auto instead of just 1 for backwards compatibility with other browsers */
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+   "You're either a leader or a lemming" - 重光 ロバート
+
+   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+   .pfProject {
+   	min-width: 100px;
+   	/* display: inline-block; */
+   	margin: 0px 10px 30px 20px;
+   	padding: 10px;
+   	width: calc(100%/4 - 10px);
+   	height: 312px;
+   	border: 2px solid #cecece;
+   	background-color: white;
+   	max-width: 295px;
+   	border-radius: 4px;
+   	border: 1px solid #e3e3e3;
+   }
+   .pfThumbnail {
+    	/* padding: 10px; */
+    	height: 200px;
+    	/* background-color: #333; */
+    	overflow: hidden;
+    }
+
+.pfTitleAlone {
+ 	padding: 9px 3px;
+ 	border-top: 3px solid #000;
+ }
+
+ .pfText {
+   padding: 15px 10px 0px 7px;
+   /* height: 40%; */
+   /* background-color: #222; */
+   line-height: 17px;
+   color: #393939;
+   font-size: 13px;
+ }
+
+ .pfTitle {
+	max-height: 225.6px;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	letter-spacing: 0px;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	border-top: 3px solid #000;
+}
+
+.filterButton {
+	display: inline-block;
+	padding: 9px 24px 7px;
+	border: 1px solid #b4eccc;
+	border-radius: 4px;
+	transition: all 0.2s ease-in;
+	position: relative;
+	overflow: hidden;
+	color: #afe0cb;
+	font-size: 14px;
+}
+
+#whiteTop.shadow {
+	box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.2);
+}
+
+body .tagify__input {
+  margin-left:0px;
+}
+
+body .tagify__input--outside {
+	display: block;
+	max-width: 600px;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+	/* margin-left: auto; */
+	/* margin-right: auto; */
+}
