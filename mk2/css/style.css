@@ -525,6 +525,10 @@ input {
 	clear: both;
 }
 
+.tagify__input {
+  z-index:900;
+}
+
 .filterButton {
 	margin-right: 10px;
 }
