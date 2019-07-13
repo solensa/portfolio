@@ -13,20 +13,15 @@ $(document).ready(function() {
       function() {
         if ($(this).attr('id') == "lightning368" ){
           $(this).find('img').attr("src", "assets/images/ln3683.gif");
-        }
-        else if ($(this).attr('id') == "athlete" ){
+        } else if ($(this).attr('id') == "athlete" ){
           $(this).find('img').attr("src", "assets/images/meSailing.gif");
-        }
-        else if ($(this).attr('id') == "analysingtreemorphology" ){
+        } else if ($(this).attr('id') == "analysingtreemorphology" ){
           $(this).find('img').attr("src", "assets/images/trees.gif");
-        }
-        else if ($(this).attr('id') == "machinelearningchatbot" ){
+        } else if ($(this).attr('id') == "machinelearningchatbot" ){
           $(this).find('img').attr("src", "assets/images/ga.gif");
-        }
-        else if ($(this).attr('id') == "illustrations" ){
+        } else if ($(this).attr('id') == "illustrations" ){
           $(this).find('img').attr("src", "assets/images/illust.gif");
-        }
-        else if ($(this).attr('id') == "naughtycoinanddice" ){
+        } else if ($(this).attr('id') == "naughtycoinanddice" ){
           $(this).find('img').attr("src", "assets/images/naughtyCoinDice.gif");
         } else if ($(this).attr('id') == "salternssailingacademy" ){
           $(this).find('img').attr("src", "assets/images/salterns2.gif");
@@ -55,25 +50,20 @@ $(document).ready(function() {
       function() {
         if ($(this).attr('id') == "lightning368" ){
           $(this).find('img').attr("src", "assets/images/ln368.png");
-        }
-        else if ($(this).attr('id') == "athlete" ){
+        } else if ($(this).attr('id') == "athlete" ){
           $(this).find('img').attr("src", "assets/images/meSailing.png");
-        }
-        else if ($(this).attr('id') == "analysingtreemorphology" ){
+        } else if ($(this).attr('id') == "analysingtreemorphology" ){
           $(this).find('img').attr("src", "assets/images/trees.png");
-        }
-        else if ($(this).attr('id') == "machinelearningchatbot" ){
+        } else if ($(this).attr('id') == "machinelearningchatbot" ){
           $(this).find('img').attr("src", "assets/images/ga.png");
-        }
-        else if ($(this).attr('id') == "illustrations" ){
+        } else if ($(this).attr('id') == "illustrations" ){
           $(this).find('img').attr("src", "assets/images/illust.png");
-        }
-        else if ($(this).attr('id') == "naughtycoinanddice" ){
+        } else if ($(this).attr('id') == "naughtycoinanddice" ){
           $(this).find('img').attr("src", "assets/images/naughtyCoinDice.png");
         } else if ($(this).attr('id') == "salternssailingacademy" ){
           $(this).find('img').attr("src", "assets/images/salterns.png");
         } else if ($(this).attr('id') == "spiritofscrum" ){
-          $(this).find('img').attr("src", "assets/images/spiritofscrum.png");
+        $(this).find('img').attr("src", "assets/images/spiritofscrum.png");
         } else if ($(this).attr('id') == "masterplan" ){
           $(this).find('img').attr("src", "assets/images/masterplan.png");
         }else if ($(this).attr('id') == "feedme" ){
@@ -143,6 +133,14 @@ $(document).ready(function() {
   });
 });
 
+// -----------------------------------------------------------------------------
+// Button action
+// -----------------------------------------------------------------------------
+
+function buttonClick(x){
+  console.log(x);
+  $( "#" + x ).toggle(  );
+}
 
 
 // -----------------------------------------------------------------------------
@@ -301,7 +299,7 @@ $(".wrapper").click(function() {
 var typed1, typed2, typed3;
 $(function() {
   typed1 = new Typed('.typed1', {
-    strings: ["<strong>Hello, I'm Robert Claridge.</strong>", "<strong>Hello, I'm Robert Claridge.</strong><div class='spacer0'></div>Welcome to my portfolio!", "<strong>Hello, I'm Robert Claridge.</strong><div class='spacer0'></div>I'm passionate about&nbsp;"],
+    strings: ["Hello, I'm Robert Claridge. ", "Hello, I'm Robert Claridge. <em>Welcome to my portfolio!</em>", "Hello, I'm Robert Claridge. <em>I love solving problems!</em>"],
     typeSpeed: typeSpeedText,
     showCursor: false,
     backDelay: 1500,
@@ -313,7 +311,7 @@ $(function() {
       // console.log('onStringTyped1');
       hasTyped1 = hasTyped1 + 1;
       if (hasTyped1 == 3) {
-        type2();
+        // type2();
       }
       // somethingIsMoving = false;
     },
@@ -401,16 +399,19 @@ function type3() {
 }
 
 // -----------------------------------------------------------------------------
-// Footer
+// top
 // -----------------------------------------------------------------------------
 
 function main(){
 	var menu = $('#menu');
   var whiteTop = $('#whiteTop');
   var pfStatement = $('.pfStatement');
+  var distFromTop = 0;
+  var leftOrigin = pfStatement.position().left;
+
 	$(document).scroll(function(){
     // subtract menu tops from one another to get the value below
-		if ( $(this).scrollTop() >=130 ){
+		if ( $(this).scrollTop() >=80 ){
 		    menu.removeClass('bottom').addClass('top')
         whiteTop.addClass('shadow')
 		} else {
@@ -424,11 +425,19 @@ function main(){
 		    whiteTop.removeClass('top').addClass('bottom')
 		}
 
-    if ( $(this).scrollTop() >=25 ){
-		    pfStatement.removeClass('bottom').addClass('top')
-		} else {
-		    pfStatement.removeClass('top').addClass('bottom')
-		}
+    // if ( $(this).scrollTop() >=22 ){
+		//     pfStatement.removeClass('bottom').addClass('top')
+		// } else {
+		//     pfStatement.removeClass('top').addClass('bottom')
+		// }
+
+    distFromTop = leftOrigin - 10*$(this).scrollTop();
+
+    pfStatement.css(
+      {"left" : distFromTop}
+    );
+
+
 	})
 }
 

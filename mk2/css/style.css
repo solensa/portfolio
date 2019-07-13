@@ -14,7 +14,7 @@
   float: left;
   /* position: relative; */
   position: fixed;
-  margin-top: 15px;
+  /* margin-top: 15px; */
   max-width: 120px;
   width: 100%;
   padding: 20px;
@@ -141,17 +141,17 @@ body {
 
 #menu.bottom {
    position: absolute;
-   top: 220px;
+   top: 100px;
 }
 
 #menu.top {
    position: fixed;
-   top: 90px;
+   top: 20px;
 }
 
 #whiteTop {
   position: absolute;
-  height: 170px;
+  height: 120px;
   width:100%;
   background-color: white;
   /* background: linear-gradient(to bottom, white 80%, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); */
@@ -184,19 +184,21 @@ body {
   display:block;
   /* float:left; */
   width:60%;
-  height:170px;
+  /* height:170px; */
   /* text-align:center; */
   /* margin:0 auto; */
   position:absolute;
   z-index:5;
 }
 .pfStatement.bottom {
-   position: absolute;
-   top: 55px;
+   position: fixed;
+   top: 42px;
 }
 .pfStatement.top {
   position: fixed;
-  top: 30px;
+  /* top: 20px; */
+  top: 42px;
+  left:-20px
 }
 
 /* =============================================================================
@@ -232,7 +234,9 @@ body {
   max-width: 100%;
   float:right;
 }
-.pfProject:hover img {
+/* added not selector to prevent a hover zoom on gif items */
+.pfProject:not(.gifHover):hover img {
+  /* transform-origin: top center; */
   transform: scale(1.3);
 }
 
@@ -413,7 +417,7 @@ body {
   border: 2px solid #cecece;
   border-radius: 5px;
   margin-top: 1.5em;
-  margin-bottom: 1em;
+  margin-bottom: 5px;
   /* margin-left: auto;
   margin-right: auto; */
 }
@@ -598,8 +602,7 @@ body .tagify__input--outside {
 	max-width: 600px;
 	border: 1px solid #dedede;
 	border-radius: 5px;
-	margin-top: 1.5em;
-	margin-bottom: 1em;
+
 	/* margin-left: auto; */
 	/* margin-right: auto; */
 }
