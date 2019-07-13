@@ -139,7 +139,10 @@ $(document).ready(function() {
 
 function buttonClick(x){
   console.log(x);
-  $( "#" + x ).toggle(  );
+  $( "#" + x ).toggle("itsOn");
+  if (x == wowBtn && $( "#" + x ).hasClass("itsOn")){
+      tagsArr.push("waysofworking");
+  }
 }
 
 
@@ -459,3 +462,8 @@ $(window).bind("load", function() {
     });
   }
 });
+
+
+// @media (max-width: 900px) {
+//   .pfProject { min-width:100%; width:100%; max-width:100%; }
+// }

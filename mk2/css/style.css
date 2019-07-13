@@ -237,7 +237,7 @@ body {
 /* added not selector to prevent a hover zoom on gif items */
 .pfProject:not(.gifHover):hover img {
   /* transform-origin: top center; */
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 .pfText {
