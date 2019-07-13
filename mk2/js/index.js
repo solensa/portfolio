@@ -138,11 +138,35 @@ $(document).ready(function() {
 // -----------------------------------------------------------------------------
 
 function buttonClick(x){
-  console.log(x);
-  $( "#" + x ).toggle("itsOn");
-  if (x == wowBtn && $( "#" + x ).hasClass("itsOn")){
-      tagsArr.push("waysofworking");
+  $( "#" + x ).toggleClass("itsOn");
+  var y = "";
+  if (x == "wowBtn"){
+    y = "waysofworking";
+  } else if( x == "designBtn"){
+    y = "design";
+  } else if( x == "fbeBtn"){
+    y = "frontbackend";
+  } else if( x == "cloudBtn"){
+    y = "clouddevops";
+  } else if( x == "dataBtn"){
+    y = "data";
+  } else if( x == "soundBtn"){
+    y = "sound";
+  } else if( x == "civBtn"){
+    y = "civilengineering";
+  } else if( x == "mobileBtn"){
+    y = "mobile";
   }
+
+  if ($( "#" + x ).hasClass("itsOn")){
+    tagsArr.push(y);
+    bounceContent();
+  } else {
+    tagsArr.splice(tagsArr.indexOf(y), 1);
+    bounceContent2();
+  }
+  console.log(tagsArr);
+  refineList();
 }
 
 
@@ -269,7 +293,7 @@ var typeSpeedText = 10;
 $(window).bind('scroll', function() {
 
   scroll = scroll + 1;
-  console.log('scroll');
+  // console.log('scroll');
   if (!somethingIsMoving) {
     // console.log("scrolledBeyond: "+ scroll + " : " +scrolledBeyond);
     if ($(window).scrollTop() > 10 && !scrolledBeyond) {
