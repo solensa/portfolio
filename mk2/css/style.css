@@ -24,6 +24,8 @@
 
 body {
   overflow-x:hidden;
+  margin:0px;
+  padding:0px;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -607,7 +609,76 @@ body .tagify__input--outside {
 	/* margin-right: auto; */
 }
 
-
 .itsOn {
   top:5px;
 }
+
+/* ---------------------- */
+/* - - Subpage Styles - - */
+/* ---------------------- */
+
+.posrel {
+  position:relative;
+}
+
+.wideClear {
+  width:100%;
+  float:left;
+  clear:both;
+  position:relative;
+}
+
+.subpageHeader {
+  height:350px;
+  background-image:url('../assets/images/example_bg.png');
+  background-repeat:no-repeat;
+  background-position: 0 0;
+  background-size:cover;
+  margin-bottom:30px;
+}
+
+.newRow {
+  max-width:1000px;
+  margin:0px auto;
+  padding-bottom:30px;
+  clear:both;
+  position:relative;
+}
+
+/* - Subheading - */
+
+.subheadContent {
+  position:absolute;
+  left:0px;
+  top:-40px;
+}
+
+.subheadContent h1 {
+  font-size:40px;
+  margin-bottom:10px;
+  background-color:#FFF;
+  padding:15px 20px 18px 25px;
+}
+
+.subheadContent h2 {
+  font-style:italic;
+  color:#a0a0a0;
+  font-size:18px;
+  line-height:21px;
+}
+
+/* - Content Rows - */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* - - */
