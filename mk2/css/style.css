@@ -21,6 +21,9 @@
   z-index: 6;
 }
 
+main {
+  padding-top:190px;
+}
 
 body {
   overflow-x:hidden;
@@ -515,6 +518,21 @@ input {
 .spacer80 {height:80px;width:100%;display:block;clear:both;}
 .spacer220 {height:220px;width:100%;display:block;clear:both;}
 
+.filterButton-container {
+  margin: -5px 0px 20px;
+  width:100%;
+  float:left;
+  clear:both;
+}
+
+.filterButton {
+	margin-right: 10px;
+}
+
+.filterButton:last-child{
+  margin-right:0px;
+}
+
 /* =============================================================================
    Sticky Footer css
    Credit: https://foundation.zurb.com/forum/posts/53901-foundation-6-sticky-footer-pushed-down-with-off-canvas-and-flexbox-css-tutorial
@@ -546,8 +564,7 @@ main {
 
    .pfProject {
    	min-width: 100px;
-   	/* display: inline-block; */
-   	margin: 0px 10px 30px 20px;
+   	margin: 0px 25px 30px 0px;
    	padding: 10px;
    	width: calc(100%/4 - 10px);
    	height: 312px;
