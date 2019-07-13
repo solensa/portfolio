@@ -426,6 +426,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   width: 100%;
   max-width: 600px;
+  z-index:10;
 }
 
 .tagify__input--outside {

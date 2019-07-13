@@ -263,16 +263,16 @@ function bounceContent() {
 };
 
 function bounceContent2() {
-  var duration = 1;
-  TweenMax.to($(".projectWindow"), duration / 4, {
-    y: 50,
-    ease: Power2.easeOut
-  });
-  TweenMax.to($(".projectWindow"), duration / 2, {
-    y: 0,
-    ease: Bounce.easeOut,
-    delay: duration / 4
-  });
+  // var duration = 1;
+  // TweenMax.to($(".projectWindow"), duration / 4, {
+  //   y: 50,
+  //   ease: Power2.easeOut
+  // });
+  // TweenMax.to($(".projectWindow"), duration / 2, {
+  //   y: 0,
+  //   ease: Bounce.easeOut,
+  //   delay: duration / 4
+  // });
 };
 
 // -----------------------------------------------------------------------------
@@ -435,15 +435,18 @@ function main(){
   var pfStatement = $('.pfStatement');
   var distFromTop = 0;
   var leftOrigin = pfStatement.position().left;
+  var topOrigin = pfStatement.position().top;
 
 	$(document).scroll(function(){
     // subtract menu tops from one another to get the value below
 		if ( $(this).scrollTop() >=80 ){
 		    menu.removeClass('bottom').addClass('top')
         whiteTop.addClass('shadow')
+        $(".nav-placeholder").height(menu.outerHeight());
 		} else {
 		    menu.removeClass('top').addClass('bottom')
         whiteTop.removeClass('shadow')
+        $(".nav-placeholder").height(0);
 		}
 
     if ( $(this).scrollTop() >0 ){
@@ -458,11 +461,12 @@ function main(){
 		//     pfStatement.removeClass('top').addClass('bottom')
 		// }
 
-    distFromTop = leftOrigin - 10*$(this).scrollTop();
-
+    // distFromTop = leftOrigin - 10*$(this).scrollTop();
+    distFromTop = topOrigin - 0.5*$(this).scrollTop();
     pfStatement.css(
-      {"left" : distFromTop}
+      {"top" : distFromTop}
     );
+
 
 
 	})
