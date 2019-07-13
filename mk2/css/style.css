@@ -519,7 +519,7 @@ input {
 .spacer220 {height:220px;width:100%;display:block;clear:both;}
 
 .filterButton-container {
-	margin: 46px 0px 20px;
+	margin: 2px 0px 20px;
 	width: 100%;
 	float: left;
 	clear: both;
@@ -766,10 +766,6 @@ body .tagify__input--outside {
 	max-width: 450px;
 	font-weight: 300;
 	line-height: 18px;
-}
-
-.tagify--outside{
-  position:absolute;
 }
 
 .subContent .newRow img {
