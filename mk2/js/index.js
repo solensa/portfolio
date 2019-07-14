@@ -439,7 +439,7 @@ function main(){
 
 	$(document).scroll(function(){
     // subtract menu tops from one another to get the value below
-		if ( $(this).scrollTop() >=80 ){
+		if ( $(this).scrollTop() >=105 ){
 		    menu.removeClass('bottom').addClass('top')
         whiteTop.addClass('shadow')
         $(".nav-placeholder").height(menu.outerHeight());

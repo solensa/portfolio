@@ -157,7 +157,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 #menu.top {
    position: fixed;
-   top: 20px;
+   /* top: 20px; */
+   top:-5px;
 }
 
 #whiteTop {
@@ -203,7 +204,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .pfStatement.bottom {
    position: fixed;
-   top: 42px;
+   top: 36px;
 }
 .pfStatement.top {
   position: fixed;
@@ -476,6 +477,11 @@ h1, h2, h3, h4, h5, h6, p {
 input {
   display:block;
   margin:0 auto;
+}
+
+.tagify__tag-text {
+  font-size: 14px;
+  font-weight: 400;
 }
 
 /* =============================================================================
@@ -796,7 +802,10 @@ body .tagify__input--outside {
   display:inline-block;
 }
 
-
+h4 {
+  font-size: 33px;
+  font-weight:900;
+}
 
 
 
