@@ -646,9 +646,14 @@ body .tagify__input--outside {
 	max-width: 600px;
 	border: 1px solid #dedede;
 	border-radius: 5px;
+}
 
-	/* margin-left: auto; */
-	/* margin-right: auto; */
+.vertiText {
+  color:#FFF;
+}
+
+footer .large-12 {
+  background-color:#1c1c1c;
 }
 
 
