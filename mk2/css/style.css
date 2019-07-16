@@ -816,3 +816,141 @@ h4 {
 
 
 /* - - */
+
+/* ------------------------- */
+/* - - Responsive Styles - - */
+/* ------------------------- */
+
+@media (max-width:1600px) {
+
+  body .grid-x > .large-10 {
+    width:100%;
+    display:block;
+  }
+
+  .grid-padding-x > div:first-child {
+    display:none;
+  }
+
+  main {
+    padding-top:180px;
+  }
+
+  .pfStatement.bottom {
+    top:120px;
+  }
+
+  .pfMe2, .pfMe {
+    left:0px;
+  }
+
+  .pfLogo {
+    left:-10px;
+  }
+
+  body .grid-x .medium-8 {
+    width:100%;
+  }
+
+  .pfStatement.bottom {
+    width:100%;
+  }
+
+}
+
+@media (max-width:1400px) {
+
+  .pfProject {
+    width:33%;
+    vertical-align:top;
+  }
+
+}
+
+@media (max-width:900px) {
+
+  .pfProject {
+    width:50%;
+    height:auto;
+  }
+
+}
+
+@media (max-width:680px) {
+
+  .shrink.header {
+    z-index:999;
+    position:relative;
+  }
+
+  .pfProject {
+    width:100%;
+    max-width:100%;
+  }
+
+  .pfStatement {
+    z-index:0;
+  }
+
+  .pfThumbnail {
+    height:auto;
+  }
+
+  #whiteTop {
+    z-index:50;
+  }
+
+  .pfStatement h4 > span {
+    line-height: 33px;
+    font-size: 30px;
+    display: block;
+    padding-right:20px;
+  }
+
+  body .grid-x .medium-8 {
+    margin-top:25px;
+  }
+
+  .tagify__input {
+    z-index:0;
+  }
+
+  .filterButton {
+  	display: inline-block;
+  	padding: 8px 9px 7px;
+  	border: 1px solid #b4eccc;
+  	border-radius: 4px;
+  	transition: all 0.2s ease-in;
+  	position: relative;
+  	overflow: hidden;
+  	color: #afe0cb;
+  	font-size: 14px;
+  	width: 45%;
+  	text-align: center;
+  	margin-bottom: 5px;
+  }
+
+  body .tagify__input--outside {
+    margin-bottom:25px;
+  }
+
+}
+
+@media (max-width:350px) {
+  .filterButton {
+    width:100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* - - */
