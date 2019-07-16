@@ -503,8 +503,6 @@ input {
 
 .vertiText {
   writing-mode: vertical-rl;
-  margin-right: auto;
-  margin-left: auto;
   padding-left: 25px;
 }
 
