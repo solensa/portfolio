@@ -251,6 +251,11 @@ h1, h2, h3, h4, h5, h6, p {
   /* transform-origin: top center; */
   transform: scale(1.1);
 }
+/* for mobile */
+.imageHover {
+  /* transform-origin: top center; */
+  transform: scale(1.1);
+}
 
 .pfText {
   padding:10px;
@@ -316,6 +321,14 @@ h1, h2, h3, h4, h5, h6, p {
   transition-property: box-shadow, transform;
 }
 .hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.06);
+  transform: scale(1.06);
+  z-index: 1;
+}
+
+/* for mobile */
+.hvr-grow-shadow-mobile-hover {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(1.06);
   transform: scale(1.06);
@@ -936,6 +949,9 @@ h4 {
   	text-align: center;
   	margin-bottom: 5px;
   }
+  .pfStatement.bottom {
+    width: 90%;
+  }
 
   body .tagify__input--outside {
     margin-bottom:25px;
@@ -947,7 +963,9 @@ h4 {
   .filterButton {
     width:100%;
   }
-
+  .pfStatement.bottom {
+    width: 90%;
+  }
   body .tagify__input--outside {
     width:97%;
   }

@@ -11,76 +11,76 @@ $(document).ready(function() {
 
     $(".gifHover").hover(
       function() {
-        if ($(this).attr('id') == "lightning368" ){
+        if ($(this).attr('id') == "lightning368") {
           $(this).find('img').attr("src", "assets/images/ln3683.gif");
-        } else if ($(this).attr('id') == "athlete" ){
+        } else if ($(this).attr('id') == "athlete") {
           $(this).find('img').attr("src", "assets/images/meSailing.gif");
-        } else if ($(this).attr('id') == "analysingtreemorphology" ){
+        } else if ($(this).attr('id') == "analysingtreemorphology") {
           $(this).find('img').attr("src", "assets/images/trees.gif");
-        } else if ($(this).attr('id') == "machinelearningchatbot" ){
+        } else if ($(this).attr('id') == "machinelearningchatbot") {
           $(this).find('img').attr("src", "assets/images/ga.gif");
-        } else if ($(this).attr('id') == "illustrations" ){
+        } else if ($(this).attr('id') == "illustrations") {
           $(this).find('img').attr("src", "assets/images/illust.gif");
-        } else if ($(this).attr('id') == "naughtycoinanddice" ){
+        } else if ($(this).attr('id') == "naughtycoinanddice") {
           $(this).find('img').attr("src", "assets/images/naughtyCoinDice.gif");
-        } else if ($(this).attr('id') == "salternssailingacademy" ){
+        } else if ($(this).attr('id') == "salternssailingacademy") {
           $(this).find('img').attr("src", "assets/images/salterns2.gif");
-        } else if ($(this).attr('id') == "spiritofscrum" ){
+        } else if ($(this).attr('id') == "spiritofscrum") {
           $(this).find('img').attr("src", "assets/images/spiritofscrum.gif");
-        } else if ($(this).attr('id') == "masterplan" ){
+        } else if ($(this).attr('id') == "masterplan") {
           $(this).find('img').attr("src", "assets/images/masterplan.gif");
-        } else if ($(this).attr('id') == "feedme" ){
+        } else if ($(this).attr('id') == "feedme") {
           $(this).find('img').attr("src", "assets/images/feedme.gif");
-        } else if ($(this).attr('id') == "sofa" ){
+        } else if ($(this).attr('id') == "sofa") {
           $(this).find('img').attr("src", "assets/images/sofa.gif");
-        } else if ($(this).attr('id') == "orgtree" ){
+        } else if ($(this).attr('id') == "orgtree") {
           $(this).find('img').attr("src", "assets/images/orgtree.gif");
-        } else if ($(this).attr('id') == "acrolist" ){
+        } else if ($(this).attr('id') == "acrolist") {
           $(this).find('img').attr("src", "assets/images/acrolist.gif");
-        } else if ($(this).attr('id') == "passimal" ){
+        } else if ($(this).attr('id') == "passimal") {
           $(this).find('img').attr("src", "assets/images/passimal.gif");
-        } else if ($(this).attr('id') == "learningstylequiz" ){
+        } else if ($(this).attr('id') == "learningstylequiz") {
           $(this).find('img').attr("src", "assets/images/shirts.gif");
-        } else if ($(this).attr('id') == "evabuild" ){
+        } else if ($(this).attr('id') == "evabuild") {
           $(this).find('img').attr("src", "assets/images/evabuild.gif");
-        } else if ($(this).attr('id') == "atom" ){
+        } else if ($(this).attr('id') == "atom") {
           $(this).find('img').attr("src", "assets/images/atom.gif");
         }
       },
       function() {
-        if ($(this).attr('id') == "lightning368" ){
+        if ($(this).attr('id') == "lightning368") {
           $(this).find('img').attr("src", "assets/images/ln368.png");
-        } else if ($(this).attr('id') == "athlete" ){
+        } else if ($(this).attr('id') == "athlete") {
           $(this).find('img').attr("src", "assets/images/meSailing.png");
-        } else if ($(this).attr('id') == "analysingtreemorphology" ){
+        } else if ($(this).attr('id') == "analysingtreemorphology") {
           $(this).find('img').attr("src", "assets/images/trees.png");
-        } else if ($(this).attr('id') == "machinelearningchatbot" ){
+        } else if ($(this).attr('id') == "machinelearningchatbot") {
           $(this).find('img').attr("src", "assets/images/ga.png");
-        } else if ($(this).attr('id') == "illustrations" ){
+        } else if ($(this).attr('id') == "illustrations") {
           $(this).find('img').attr("src", "assets/images/illust.png");
-        } else if ($(this).attr('id') == "naughtycoinanddice" ){
+        } else if ($(this).attr('id') == "naughtycoinanddice") {
           $(this).find('img').attr("src", "assets/images/naughtyCoinDice.png");
-        } else if ($(this).attr('id') == "salternssailingacademy" ){
+        } else if ($(this).attr('id') == "salternssailingacademy") {
           $(this).find('img').attr("src", "assets/images/salterns.png");
-        } else if ($(this).attr('id') == "spiritofscrum" ){
-        $(this).find('img').attr("src", "assets/images/spiritofscrum.png");
-        } else if ($(this).attr('id') == "masterplan" ){
+        } else if ($(this).attr('id') == "spiritofscrum") {
+          $(this).find('img').attr("src", "assets/images/spiritofscrum.png");
+        } else if ($(this).attr('id') == "masterplan") {
           $(this).find('img').attr("src", "assets/images/masterplan.png");
-        }else if ($(this).attr('id') == "feedme" ){
+        } else if ($(this).attr('id') == "feedme") {
           $(this).find('img').attr("src", "assets/images/feedme.png");
-        }else if ($(this).attr('id') == "sofa" ){
+        } else if ($(this).attr('id') == "sofa") {
           $(this).find('img').attr("src", "assets/images/sofa.png");
-        } else if ($(this).attr('id') == "orgtree" ){
+        } else if ($(this).attr('id') == "orgtree") {
           $(this).find('img').attr("src", "assets/images/orgtree.svg");
-        } else if ($(this).attr('id') == "acrolist" ){
+        } else if ($(this).attr('id') == "acrolist") {
           $(this).find('img').attr("src", "assets/images/acrolist.png");
-        } else if ($(this).attr('id') == "passimal" ){
+        } else if ($(this).attr('id') == "passimal") {
           $(this).find('img').attr("src", "assets/images/passimal.png");
-        } else if ($(this).attr('id') == "learningstylequiz" ){
+        } else if ($(this).attr('id') == "learningstylequiz") {
           $(this).find('img').attr("src", "assets/images/shirts.png");
-        } else if ($(this).attr('id') == "evabuild" ){
+        } else if ($(this).attr('id') == "evabuild") {
           $(this).find('img').attr("src", "assets/images/evabuild.png");
-        } else if ($(this).attr('id') == "atom" ){
+        } else if ($(this).attr('id') == "atom") {
           $(this).find('img').attr("src", "assets/images/atom.png");
         }
       }
@@ -131,34 +131,88 @@ $(document).ready(function() {
     tagsArr.splice(tagsArr.indexOf(e.detail.data.value.toLowerCase().replace(/\s+/g, '')), 1);
     refineList();
   });
+
+  // -----------------------------------------------------------------------------
+  // Mobile action
+  // -----------------------------------------------------------------------------
+
+  var isMobile = false; //initiate as false
+  // device detection
+  if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) ||
+    /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0, 4))) {
+    isMobile = true;
+  }
+  // isMobile = true;
+  if (isMobile) {
+    $(window).on('scroll', function() {
+      debounce(calculateLayout(), 300);
+    });
+  }
+
 });
 
+function calculateLayout(){
+  $(".pfProject").each(function() {
+    var scrollTop = $(window).scrollTop(),
+      elementOffset = $(this).offset().top,
+      scrollHalf = ($(window).scrollTop() + ($(window).height() / 3)),
+      distance = (elementOffset - scrollTop);
+
+    if (elementOffset <= scrollHalf && elementOffset > scrollTop) {
+      console.log($(this).attr('id') + "|| top: " + scrollTop + " || third: " + scrollHalf)
+      $(this).trigger('mouseenter');
+      $(this).addClass('hvr-grow-shadow-mobile-hover');
+      if (!$(this).hasClass("gifHover")) {
+        $('img', this).addClass('imageHover');
+      }
+    } else {
+      $(this).removeClass('hvr-grow-shadow-mobile-hover');
+      $('img', this).removeClass('imageHover');
+      $(this).trigger('mouseout');
+    }
+  });
+}
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function() {
+    var context = this,
+      args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
 // -----------------------------------------------------------------------------
 // Button action
 // -----------------------------------------------------------------------------
 
-function buttonClick(x){
-  $( "#" + x ).toggleClass("itsOn");
+function buttonClick(x) {
+  $("#" + x).toggleClass("itsOn");
   var y = "";
-  if (x == "wowBtn"){
+  if (x == "wowBtn") {
     y = "waysofworking";
-  } else if( x == "designBtn"){
+  } else if (x == "designBtn") {
     y = "design";
-  } else if( x == "fbeBtn"){
+  } else if (x == "fbeBtn") {
     y = "frontbackend";
-  } else if( x == "cloudBtn"){
+  } else if (x == "cloudBtn") {
     y = "clouddevops";
-  } else if( x == "dataBtn"){
+  } else if (x == "dataBtn") {
     y = "data";
-  } else if( x == "soundBtn"){
+  } else if (x == "soundBtn") {
     y = "sound";
-  } else if( x == "civBtn"){
+  } else if (x == "civBtn") {
     y = "civilengineering";
-  } else if( x == "mobileBtn"){
+  } else if (x == "mobileBtn") {
     y = "mobile";
   }
 
-  if ($( "#" + x ).hasClass("itsOn")){
+  if ($("#" + x).hasClass("itsOn")) {
     tagsArr.push(y);
     bounceContent();
   } else {
@@ -430,47 +484,47 @@ function type3() {
 // top
 // -----------------------------------------------------------------------------
 
-function main(){
-	var menu = $('#menu');
+function main() {
+  var menu = $('#menu');
   var whiteTop = $('#whiteTop');
   var pfStatement = $('.pfStatement');
   var distFromTop = 0;
   var leftOrigin = pfStatement.position().left;
   var topOrigin = pfStatement.position().top;
 
-	$(document).scroll(function(){
+  $(document).scroll(function() {
     // subtract menu tops from one another to get the value below
-		if ( $(this).scrollTop() >=105 ){
-		    menu.removeClass('bottom').addClass('top')
-        whiteTop.addClass('shadow')
-        $(".nav-placeholder").height(menu.outerHeight());
-		} else {
-		    menu.removeClass('top').addClass('bottom')
-        whiteTop.removeClass('shadow')
-        $(".nav-placeholder").height(0);
-		}
+    if ($(this).scrollTop() >= 105) {
+      menu.removeClass('bottom').addClass('top')
+      whiteTop.addClass('shadow')
+      $(".nav-placeholder").height(menu.outerHeight());
+    } else {
+      menu.removeClass('top').addClass('bottom')
+      whiteTop.removeClass('shadow')
+      $(".nav-placeholder").height(0);
+    }
 
-    if ( $(this).scrollTop() >0 ){
-		    whiteTop.removeClass('bottom').addClass('top')
-		} else {
-		    whiteTop.removeClass('top').addClass('bottom')
-		}
+    if ($(this).scrollTop() > 0) {
+      whiteTop.removeClass('bottom').addClass('top')
+    } else {
+      whiteTop.removeClass('top').addClass('bottom')
+    }
 
     // if ( $(this).scrollTop() >=22 ){
-		//     pfStatement.removeClass('bottom').addClass('top')
-		// } else {
-		//     pfStatement.removeClass('top').addClass('bottom')
-		// }
+    //     pfStatement.removeClass('bottom').addClass('top')
+    // } else {
+    //     pfStatement.removeClass('top').addClass('bottom')
+    // }
 
     // distFromTop = leftOrigin - 10*$(this).scrollTop();
-    distFromTop = topOrigin - 0.5*$(this).scrollTop();
-    pfStatement.css(
-      {"top" : distFromTop}
-    );
+    distFromTop = topOrigin - 0.5 * $(this).scrollTop();
+    pfStatement.css({
+      "top": distFromTop
+    });
 
 
 
-	})
+  })
 }
 
 
